@@ -37,7 +37,7 @@ parser.add_argument('--lambda_vgg', type=float, default=0.02)
 
 parser.add_argument('--testing_epoch', type=int, default=1)
 parser.add_argument('--testing_mode', default="Nat")
-parser.add_argument('--testing_dir_inp', default="./hazy_test/")
+parser.add_argument('--testing_dir_inp', default="/home/muahmmad/projects/Image_enhancement/dataset/Enhancement_Dataset")
 parser.add_argument('--testing_dir_gt', default="./clean_test/")
 
 opt = parser.parse_args()
