@@ -1,26 +1,13 @@
 from models import CC_Module
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader
 import cv2
 import os
 import numpy as np
 import time
-# from options import opt
-import math
-import shutil
 from tqdm import tqdm
-
 CHECKPOINTS_DIR = './ckpts'
-# INP_DIR = opt.testing_dir_inp
-# CLEAN_DIR = opt.testing_dir_gt
-
-device = 'cuda:0' if torch.cuda.is_available() else 'cpu'        
-
+device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 ch = 3
-
 network = CC_Module()
 checkpoint = torch.load(os.path.join(CHECKPOINTS_DIR,"netG_295.pt"))
 network.load_state_dict(checkpoint['model_state_dict'])

@@ -1,5 +1,4 @@
 from collections import namedtuple
-
 import torch
 from torchvision import models
 
